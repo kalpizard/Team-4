@@ -1,11 +1,17 @@
+import { Routing } from '../src/router/Routing.jsx';
+// import Footer from './components/Footer.jsx';
+import { Header } from './components/Header.jsx';
+import { AuthProvider } from './contexts/AuthContext.jsx';
+import { ServicesProvider } from './contexts/ServicesContext.jsx';
 
-import {Routing} from '../src/router/Routing.jsx'
 export function TakeTime() {
   return (
-    <>
-      <h1>
-      <Routing/>
-      </h1>
-    </>
-  )
+    <AuthProvider>
+      <ServicesProvider>
+        <Header />
+        <Routing />
+        {/* <Footer /> */}
+      </ServicesProvider>
+    </AuthProvider>
+  );
 }
