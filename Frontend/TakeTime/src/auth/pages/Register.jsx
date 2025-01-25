@@ -22,34 +22,38 @@ export const Register = ({ children, title = 'Sign In' }) => {
 
   const FuncRegis = async (e) => {
     e.preventDefault();
-
-    if (!name || !email || !password) {
+  
+   
+    if (!name || !email || !password || !newPassword) {
       alert('Por favor, completa todos los campos.');
+      return;
     }
-
+  
+    
+    if (password !== newPassword) {
+      alert('Las contraseñas no coinciden');
+      return;
+    }
     try {
-
       const response = await getUsers();
       const users = response.data;
-
-
-      const usuarioExiste = users.find(user => user.email === email);
+      
+      const usuarioExiste = users.find((user) => user.email === email);
       if (usuarioExiste) {
-        alert('Ya existe un usuario con este correo');
+        alert('Ya existe un usuario con este correo.');
         return;
       }
-
-
-      if (password == newPassword) {
-        await PostUsers("http://localhost:3001/usuarios", formData);
-        alert('¡Registro exitoso!');
-        navigate('/login');
-      }
-
+  
+      
+      await PostUsers('http://localhost:3001/usuarios', formData);
+      alert('Registro exitoso');
+      navigate('/login');
     } catch (error) {
+      
       alert(error.response?.data?.error || 'Hubo un problema con el registro');
     }
   };
+  
 
   const handleChange = (e) => {
     setFormData({
