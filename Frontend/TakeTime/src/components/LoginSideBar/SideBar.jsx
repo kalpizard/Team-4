@@ -114,12 +114,14 @@
 //       </div>
 //     );
 //   };
+import { useAuthContext } from "../../contexts/AuthContext.jsx";
 import { useState, useEffect } from "react";
 import ServiceForm from "./components/ServiceForm";
 import { useServices } from "../../contexts/ServicesContext.jsx";
 import axios from "axios";
 
 export const SideBar = () => {
+  const {userSession} = useAuthContext()
   const [modalCreateService, setModalCreateService] = useState(false);
   const [habilidadSeleccionada, setHabilidadSeleccionada] = useState("");
   const [ubicacion, setUbicacion] = useState("");
@@ -158,12 +160,18 @@ export const SideBar = () => {
   };
 
   const handleSubmit = () => {
+    if (!userSession) {
+      return;
+    }
+
     if (!nombreServicio || !habilidadSeleccionada || !ubicacion || !modalidad || !horasDisponibles) {
       alert("Por favor, complete todos los campos.");
       return;
     }
 
     const newService = {
+      idUsuario: userSession.id,
+      nameUser: userSession.name,
       nombreServicio,
       habilidad: habilidadSeleccionada,
       ubicacion,

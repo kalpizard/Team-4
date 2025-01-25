@@ -1,17 +1,19 @@
 import { Link, useNavigate } from 'react-router-dom';
-
+import { useAuthContext } from '../contexts/AuthContext';
 export const Header = () => {
+  const{userSession, update, setUpdate} = useAuthContext()
   const pagesList = [
     { path: '/home', label: 'Home' },
     { path: '/about', label: 'About' },
     { path: '/faq', label: 'Faq' },
   ];
-
+  
   const navigate = useNavigate();
 
   const handleLogout = () => {
     document.cookie = 'refresh_token=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     document.cookie = 'access_token=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    setUpdate(update +1)
     navigate('/login');
   };
 
@@ -40,6 +42,8 @@ export const Header = () => {
         </ul>
       </nav>
 
+      {userSession ? (
+      <>      
       {/* Menú de usuario y Logout */}
       <div className="flex items-center space-x-4">
         {/* Menú desplegable */}
@@ -72,21 +76,14 @@ export const Header = () => {
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               role="menuitem"
             >
-              Nombre
+              Nombre: {userSession.name}
             </a>
             <a
               href="#"
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               role="menuitem"
             >
-              Servicio
-            </a>
-            <a
-              href="#"
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              role="menuitem"
-            >
-              Horas
+              Horas: {userSession.hora}
             </a>
           </div>
         </div>
@@ -99,6 +96,13 @@ export const Header = () => {
           Logout
         </button>
       </div>
+    </>): (
+      <>
+      
+      <Link to={"/login"}>Login</Link>
+      <Link to={"/register"}>Resgister</Link>
+      </>
+    )}
     </header>
   );
 };
