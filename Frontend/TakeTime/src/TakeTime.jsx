@@ -1,11 +1,10 @@
-
-import {Routing} from '../src/router/Routing.jsx'
+import { Routing } from '../src/router/Routing.jsx';
+import Header from './components/Header.jsx';
 export function TakeTime() {
   return (
     <>
-      <h1>
-      <Routing/>
-      </h1>
+      <Header />
+      <Routing />
     </>
-  )
+  );
 }
