@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { getUsers } from '../../services/axios.js';
 import { KJUR } from 'jsrsasign';
 import {checkTokenAvailability} from '../components/Token.jsx'
-import { AuthLayout } from '../layout/AuthLayout.jsx';
-export const Login = ({children}) => {
+export const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -57,9 +56,8 @@ export const Login = ({children}) => {
   }, 60000); // Comprobar cada minuto
 
   return (
-    <AuthLayout>
       <>
-       <div>
+       <div className='w-full h-full bg-lime-100'>
         <h1>Login</h1>
         <label htmlFor="username">Usuario:</label>
         <input
@@ -84,7 +82,6 @@ export const Login = ({children}) => {
         {errorMessage && <p>{errorMessage}</p>}
       </div>
     </>
-    </AuthLayout>
      
   );
 }
