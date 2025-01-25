@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { getUsers } from '../../services/axios.js';
+import { getData } from '../../services/axios.js';
 import { KJUR } from 'jsrsasign';
 import { checkTokenAvailability } from '../components/Token.jsx';
 import { useNavigate } from 'react-router';
@@ -19,9 +19,9 @@ export const Login = ({ children, title = "Login" }) => {
     if (!username.trim() || !password.trim()) {
       return;
     }
-
+    const url = 'http://localhost:3001/usuarios'
     try {
-      const response = await getUsers();
+      const response = await getData(url);
       const users = response.data;
 
       const name = users.find((u) => u.name === username);

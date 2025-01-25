@@ -1,7 +1,7 @@
 import axios from 'axios';
-export const getUsers = async () => {
+export const getData = async (url) => {
     try {
-      const response = await axios.get('http://localhost:3001/usuarios'); 
+      const response = await axios.get(url); 
       return response
     } catch (error) {
       console.error('Error al realizar la solicitud GET:', error);
