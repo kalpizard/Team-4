@@ -1,12 +1,12 @@
-import { SideBar } from "../../components/LoginSideBar/SideBar"
-import { ListServices } from "../../components/LoginSideBar/ListServices"
-export const PrincipalPage = () => {
+import { SideBar } from '../../components/LoginSideBar/SideBar';
+import { ListServices } from '../../components/LoginSideBar/ListServices';
 
+export const PrincipalPage = () => {
   return (
     <>
-    <div>PrincipalPage</div>
-    <SideBar/>
-    <ListServices/>
+      <div>PrincipalPage</div>
+      <SideBar />
+      <ListServices />
     </>
-  )
-}
+  );
+};
