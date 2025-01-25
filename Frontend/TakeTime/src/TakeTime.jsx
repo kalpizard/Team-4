@@ -1,11 +1,11 @@
 import './App.css'
 
-function App() {
+export function TakeTime() {
   return (
     <>
-      
+      <h1 className='font-black text-6xl text-aguacate'>
+        Hola
+      </h1>
     </>
   )
 }
-
-export default App
