@@ -2,5 +2,10 @@
     "usuarios": [
       { "id": 1, "name": "Juan", "edad": 30, "password": "derek"},
       { "id": 2, "name": "Ana", "edad": 25, "password": "derek"}
+    ],
+      "habilidades": [
+      { "id": 1, "nombre": "Programación" },
+      { "id": 2, "nombre": "Diseño Gráfico" },
+      { "id": 3, "nombre": "Marketing Digital" }
     ]
   }
