@@ -6,14 +6,14 @@ import Register from '../auth/pages/Register'
 export const Routing = () =>{
   return (
     <div id='root'>
-        <Router>
+        
           <Routes>
-          <Route path="/" element={<PrincipalPage />} />
+           <Route path="/" element={<PrincipalPage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/Register" element={<Register />} />     
             <Route path="/home" element={<PrincipalPage />} />            
           </Routes>
-        </Router>
+       
     </div>
   )
 }
