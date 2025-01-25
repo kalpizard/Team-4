@@ -195,6 +195,8 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import ServiceForm from "./components/ServiceForm"; // Componente para el formulario
 import LocationSearch from "./components/LocationSearch"; // Componente para la búsqueda de ubicación
+import { PostUsers } from "../../services/axios";
+
 export const SideBar = () => {
     const [modalCreateService, setModalCreateService] = useState(false);
     const [habilidadSeleccionada, setHabilidadSeleccionada] = useState("");
@@ -205,6 +207,7 @@ export const SideBar = () => {
     const [habilidades, setHabilidades] = useState([]);
     const [ubicaciones, setUbicaciones] = useState([]);
     const [filteredUbicaciones, setFilteredUbicaciones] = useState([]);
+    const url = "http://localhost:3001/servicios"
   
     useEffect(() => {
       const fetchHabilidades = async () => {
@@ -244,7 +247,7 @@ export const SideBar = () => {
       setHorasDisponibles(event.target.value);
     };
   
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
       if (!nombreServicio || !habilidadSeleccionada || !ubicacion || !modalidad || !horasDisponibles) {
         alert("Por favor, complete todos los campos.");
         return;
@@ -257,6 +260,7 @@ export const SideBar = () => {
         modalidad,
         horasDisponibles,
       };
+      PostUsers(url,servicio)
   
       console.log("Servicio creado: ", servicio);
   

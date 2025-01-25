@@ -1,11 +1,28 @@
 {
-    "usuarios": [
-      { "id": 1, "name": "Juan", "edad": 30, "password": "derek"},
-      { "id": 2, "name": "Ana", "edad": 25, "password": "derek"}
-    ],
-      "habilidades": [
-      { "id": 1, "nombre": "Programación" },
-      { "id": 2, "nombre": "Diseño Gráfico" },
-      { "id": 3, "nombre": "Marketing Digital" }
-    ]
-  }
+  "usuarios": [
+    {
+      "id": "5493",
+      "name": "DErek",
+      "email": "dereknogera9@gmail.com",
+      "Age": "12",
+      "password": "derek123",
+      "Nationality": "Tico",
+      "hora": 10
+    }
+  ],
+  "habilidades": [
+    {
+      "id": 1,
+      "nombre": "Programación"
+    },
+    {
+      "id": 2,
+      "nombre": "Diseño Gráfico"
+    },
+    {
+      "id": 3,
+      "nombre": "Marketing Digital"
+    }
+  ],
+  "servicios": []
+}
