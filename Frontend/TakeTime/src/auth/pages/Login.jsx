@@ -4,8 +4,9 @@ import { KJUR } from 'jsrsasign';
 import { checkTokenAvailability } from '../components/Token.jsx'
 import { useNavigate } from 'react-router';
 import { AuthLayout } from '../layout/AuthLayout.jsx';
+import { Link } from 'react-router-dom';
 
-export const Login = ({ children, title = "Sign in" }) => {
+export const Login = ({ children, title = "Login" }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const secretKey = 'cocodeVersion';
@@ -16,7 +17,7 @@ export const Login = ({ children, title = "Sign in" }) => {
     if (!username.trim() || !password.trim()) {
       return;
     }
-    
+
     try {
       const response = await getUsers();
       const users = response.data;
@@ -36,7 +37,7 @@ export const Login = ({ children, title = "Sign in" }) => {
         const payload = {
           username: name,
           exp: Math.floor(Date.now() / 1000) + 86400, // 1 día de expiración
-          
+
 
         };
         const accessToken = KJUR.jws.JWS.sign('HS256', { alg: 'HS256', typ: 'JWT' }, payload, secretKey);
@@ -207,10 +208,24 @@ export const Login = ({ children, title = "Sign in" }) => {
 
         <p className="text-sm mt-6 text-center text-gray-800">
           Don't have an account{' '}
-          <a href="#" onClick={(e) => e.preventDefault()} className="text-blue-600 font-semibold hover:underline ml-1">
+          {/* <a href="#" onClick={(e) => e.preventDefault()} className="text-blue-600 font-semibold hover:underline ml-1">
             Register here
-          </a>
+          </a> */}
+
+          <Link
+            className="text-blue-600 font-semibold hover:underline ml-1"
+            to="/register"  >
+            Register here
+
+          </Link>
+
+
+
+
+
         </p>
+
+
       </form>
 
 
