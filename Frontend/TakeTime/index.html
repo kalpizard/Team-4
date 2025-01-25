@@ -6,10 +6,31 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Take Time</title>
+  <style>
+    :root {
+      --color-gray-main: #E6F7FF;
+    }
+
+    .bg-gray-primary {
+      background-color: var(--color-gray-main);
+    }
+
+    .min-h-screen {
+      min-height: 100vh;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .flex-col {
+      flex-direction: column;
+    }
+  </style>
 </head>
 
 <body>
-  <div class="flex flex-col min-h-screen" id="root"></div>
+  <div class="flex flex-col min-h-screen bg-gray-primary" id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
 

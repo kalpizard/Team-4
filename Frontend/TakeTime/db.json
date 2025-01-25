@@ -46,6 +46,16 @@
       "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - El Carmen",
       "modalidad": "virtual",
       "horasDisponibles": "3"
+    },
+    {
+      "id": "9652",
+      "idUsuario": "0438",
+      "nameUser": "23dereek",
+      "nombreServicio": "kevin",
+      "habilidad": "Programación",
+      "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - Catedral",
+      "modalidad": "virtual",
+      "horasDisponibles": "2"
     }
   ],
   "tratos": [

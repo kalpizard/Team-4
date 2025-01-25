@@ -4,18 +4,23 @@ export const AuthLayout = ({ children, title = '' }) => {
 
         <>
             <div className="font-[sans-serif]">
-                <div className="grid lg:grid-cols-2 gap-4 max-lg:gap-12 bg-gradient-to-r from-blue-500 to-blue-700 sm:px-8 px-4 py-12 h-[320px]">
+                <div className="grid lg:grid-cols-2 gap-4 max-lg:gap-12 bg-gradient-to-r bg-primary sm:px-8 px-4 py-12 h-[320px]">
                     <div>
                         <a href="#" onClick={(e) => e.preventDefault()}>
-                            <img
+                            {/* <img
                                 src="https://readymadeui.com/readymadeui-white.svg"
                                 alt="logo"
                                 className="w-40"
-                            />
+                            /> */}
                         </a>
                         <div className="max-w-lg mt-16 max-lg:hidden">
-                            <h3 className="text-3xl font-bold text-white">Sign in</h3>
-                            <p className="text-sm mt-4 text-white">Embark on a seamless journey as you sign in to your account. Unlock a realm of opportunities and possibilities that await you.</p>
+
+
+
+
+                            <p class="max-w-lg text-3xl font-semibold leading-normal text-gray-900 ">¡Empecemos a construir juntos!</p>
+
+
                         </div>
                     </div>
 

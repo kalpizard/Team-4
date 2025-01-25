@@ -10,7 +10,32 @@
     --color-avocado-400: oklch(0.92 0.19 114.08);
     --color-avocado-500: oklch(0.84 0.18 117.33);
     --color-avocado-600: oklch(0.53 0.12 118.34);
-    --color-aguacate: #80C000;
+    --color-gray-main: #66B2FF;
+    --color-primary: #B3D9FF;
+    --color-nav: #B3D9FF;
     --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
     --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+    --color-regal-blue: #80C000;
 }
+
+/* 
+
+ (Un tono más fuerte de azul que complementa al fondo)
+#CCEFFF (Un azul pastel más claro, para un efecto suave)
+#007ACC (Un azul vivo para resaltar botones o enlaces)
+#005F99 (Un azul más profundo y elegante, ideal para contraste)
+#E6F7FF (Un azul extremadamente claro, casi blanco, para acentos sutiles) */
+
+
+
+
+/* #B3D9FF
+#99CCF3
+#80BFFF
+#66B2FF
+#4DA6E0
+#338BB3
+#1A759F
+#005F89
+#004A70
+#00395 */
