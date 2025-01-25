@@ -8,7 +8,7 @@ export const useAuthContext = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
   const [update, setUpdate] = useState(0);
-  const [userSession, setUserSession] = useState(null);
+  const [userSession, setUserSession] = useState({});
 
   const AuthUser = () => {
     const accessToken = document.cookie

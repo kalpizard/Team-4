@@ -38,52 +38,42 @@
   ],
   "servicios": [
     {
-      "id": "57da",
-      "nombreServicio": "Ingles A2",
-      "habilidad": "Marketing Digital",
+      "id": "c735",
+      "idUsuario": "0438",
+      "nameUser": "23dereek",
+      "nombreServicio": "Servicio1",
+      "habilidad": "Programación",
       "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - El Carmen",
-      "modalidad": "virtual",
-      "horasDisponibles": "2"
-    },
-    {
-      "id": "fa5a",
-      "nombreServicio": "121212",
-      "habilidad": "Diseño Gráfico",
-      "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - Cajón",
       "modalidad": "virtual",
       "horasDisponibles": "3"
+    }
+  ],
+  "tratos": [
+    {
+      "id": "ae9c",
+      "serviceId": "57da",
+      "buyerId": "0438",
+      "buyerName": "23dereek",
+      "hours": 2,
+      "type": "trade"
     },
     {
-      "id": "512e",
-      "nombreServicio": "ASddddd",
-      "habilidad": "Programación",
-      "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - Catedral",
-      "modalidad": "virtual",
-      "horasDisponibles": "10"
+      "id": "e11c",
+      "serviceId": "57da",
+      "buyerId": "0438",
+      "buyerName": "23dereek",
+      "hours": 2,
+      "type": "trade"
     },
     {
-      "id": "8588",
-      "nombreServicio": "s12u1212",
-      "habilidad": "Programación",
-      "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - El Carmen",
-      "modalidad": "presencial",
-      "horasDisponibles": "4"
-    },
-    {
-      "id": "670b",
-      "nombreServicio": "drek111",
-      "habilidad": "Programación",
-      "ubicacion": "SAN JOSÉ - CANTÓN 2 - ALAJUELITA - Alajuelita",
-      "modalidad": "virtual",
-      "horasDisponibles": "15"
-    },
-    {
-      "id": "0f33",
-      "nombreServicio": "asaasas",
-      "habilidad": "Programación",
-      "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - El Carmen",
-      "modalidad": "presencial",
-      "horasDisponibles": "4"
+      "id": "8779",
+      "serviceId": "c735",
+      "buyerId": "3f66",
+      "buyerName": "Derek12",
+      "sellerId": "0438",
+      "sellerName": "23dereek",
+      "hours": 2,
+      "type": "trade"
     }
   ]
 }

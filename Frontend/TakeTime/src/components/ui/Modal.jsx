@@ -5,12 +5,21 @@ const Modal = ({ children, Open, Close }) => {
     return (
       <>
         <div
-          className='fixed inset-0 z-10 overflow-hidden bg-black opacity-60'
+          className="fixed inset-0 z-10 bg-black bg-opacity-60"
           onClick={Close}
         ></div>
-        <div className='fixed inset-0 z-20 overflow-hidden'>
-          {children}
-          <button onClick={Close}>Cerrar</button>
+        <div className="fixed inset-0 z-20 flex items-center justify-center p-4">
+          <div className="relative bg-white rounded-2xl shadow-lg max-w-lg w-full p-6">
+            {children}
+            <div className="mt-4 flex justify-end">
+              <button
+                className="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all"
+                onClick={Close}
+              >
+                Cerrar
+              </button>
+            </div>
+          </div>
         </div>
       </>
     );
