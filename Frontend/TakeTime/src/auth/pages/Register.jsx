@@ -1,3 +1,5 @@
+
+
 import React, { useState } from 'react';
 import { PostUsers } from '../../services/axios'; 
 import { useNavigate } from 'react-router-dom';
@@ -5,6 +7,7 @@ import { getUsers } from '../../services/axios';
 
 function Register() {
   const navigate = useNavigate();
+  const [newPassword, setnewPassword] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -21,7 +24,6 @@ function Register() {
 
     if (!name || !email || !Age || !password || !Nationality) {
       alert('Por favor, completa todos los campos.');
-      return;
     }
 
     try {
@@ -36,10 +38,13 @@ function Register() {
         return;
       }
 
-   
-      await PostUsers("http://localhost:3001/usuarios", formData);
+      
+      if (password == newPassword) {
+        await PostUsers("http://localhost:3001/usuarios", formData);
       alert('¡Registro exitoso!');
       navigate('/login'); 
+      }   
+      
     } catch (error) {
       alert(error.response?.data?.error || 'Hubo un problema con el registro');
     }
@@ -58,8 +63,10 @@ function Register() {
         <input id="name" name="name" type="text" value={name} onChange={handleChange} placeholder="Name" required />
         <input id="email" name="email" type="email" value={email} onChange={handleChange} placeholder="Gmail" required />
         <input id="Age" name="Age" type="text" value={Age} onChange={handleChange} placeholder="Age" required />
-        <input id="password" name="password" type="password" value={password} onChange={handleChange} placeholder="Password" required />
         <input id="Nationality" name="Nationality" type="text" value={Nationality} onChange={handleChange} placeholder="Nationality" required />
+        <input id="password" name="password" type="password" value={password} onChange={handleChange} placeholder="Password" required />
+        <input id="ConfirmarPassword" name="password" type="password" value={newPassword} onChange={(e) => setnewPassword(e.target.value)}  placeholder="Confirmar Password" required />
+
         <button type="submit" className="btn">Register</button>
       </form>
     </div>
