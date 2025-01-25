@@ -3,12 +3,13 @@
 import React, { useState } from 'react';
 import { PostUsers } from '../../services/axios';
 import { Link, useNavigate } from 'react-router-dom';
-import { getUsers } from '../../services/axios';
+import { getData } from '../../services/axios';
 import { AuthLayout } from '../layout/AuthLayout';
 
 export const Register = ({ children, title = 'Sign In' }) => {
   const navigate = useNavigate();
   const [newPassword, setnewPassword] = useState('');
+  const url = 'http://localhost:3001/usuarios'
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -29,7 +30,7 @@ export const Register = ({ children, title = 'Sign In' }) => {
 
     try {
 
-      const response = await getUsers();
+      const response = await getData(url);
       const users = response.data;
 
 
