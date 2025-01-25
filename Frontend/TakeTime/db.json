@@ -1,6 +1,6 @@
 {
     "usuarios": [
-      { "id": 1, "nombre": "Juan", "edad": 30 },
-      { "id": 2, "nombre": "Ana", "edad": 25 }
+      { "id": 1, "name": "Juan", "edad": 30, "password": "derek"},
+      { "id": 2, "name": "Ana", "edad": 25, "password": "derek"}
     ]
   }

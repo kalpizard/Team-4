@@ -1,10 +1,10 @@
-import './App.css'
 
+import {Routing} from '../src/router/Routing.jsx'
 export function TakeTime() {
   return (
     <>
-      <h1 className='font-black text-6xl text-aguacate'>
-        Hola
+      <h1>
+      <Routing/>
       </h1>
     </>
   )
