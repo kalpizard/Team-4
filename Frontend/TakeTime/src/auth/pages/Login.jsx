@@ -8,21 +8,17 @@ import { AuthLayout } from '../layout/AuthLayout.jsx';
 export const Login = ({ children, title = "Sign in" }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [errorMessage, setErrorMessage] = useState('');
   const secretKey = 'cocodeVersion';
   const Navigate = useNavigate();
 
   const submit = async (e) => {
     e.preventDefault();
     if (!username.trim() || !password.trim()) {
-      setErrorMessage('Usuario y contraseña son requeridos.');
       return;
     }
     
     try {
       const response = await getUsers();
-      console.log(response);
-
       const users = response.data;
 
       const name = users.find((u) => u.name === username);
@@ -40,6 +36,8 @@ export const Login = ({ children, title = "Sign in" }) => {
         const payload = {
           username: name,
           exp: Math.floor(Date.now() / 1000) + 86400, // 1 día de expiración
+          
+
         };
         const accessToken = KJUR.jws.JWS.sign('HS256', { alg: 'HS256', typ: 'JWT' }, payload, secretKey);
 
@@ -64,11 +62,6 @@ export const Login = ({ children, title = "Sign in" }) => {
 
   return (
     <AuthLayout>
-
-
-
-
-
       <form onSubmit={submit}>
         <div className="mb-8">
           <h3 className="text-3xl font-extrabold text-gray-800">{title}</h3>
