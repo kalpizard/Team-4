@@ -69,6 +69,14 @@
       "ubicacion": "SAN JOSÉ - CANTÓN 2 - ALAJUELITA - Alajuelita",
       "modalidad": "virtual",
       "horasDisponibles": "15"
+    },
+    {
+      "id": "0f33",
+      "nombreServicio": "asaasas",
+      "habilidad": "Programación",
+      "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - El Carmen",
+      "modalidad": "presencial",
+      "horasDisponibles": "4"
     }
   ]
 }
