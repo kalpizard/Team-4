@@ -20,3 +20,4 @@ Para empezar a usar este proyecto, sigue estos pasos:
    - npm install tailwindcss @tailwindcss/vite
    - npm install -g tailwindcss
    - npm install tailwindcss
+.
