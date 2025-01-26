@@ -1,25 +1,19 @@
 {
   "usuarios": [
     {
-      "id": "3f66",
-      "name": "Derek12",
-      "email": "dereknogera911@gmail.com",
-      "password": "12",
-      "hora": 10
-    },
-    {
-      "id": "c83f",
-      "name": "yacith",
-      "email": "ggggg@fdd",
-      "password": "12",
-      "hora": 9
-    },
-    {
-      "id": "04c2",
+      "buyerId": "7456",
       "name": "23dereek",
       "email": "dereknogera9@gmail.com",
-      "password": "12",
-      "hora": -3
+      "password": "1",
+      "hora": 8,
+      "id": "7456"
+    },
+    {
+      "id": "873e",
+      "name": "Kevin",
+      "email": "dereknogera91@gmail.com",
+      "password": "1",
+      "hora": 11
     }
   ],
   "habilidades": [
@@ -38,27 +32,67 @@
   ],
   "servicios": [
     {
-      "id": "c735",
-      "idUsuario": "0438",
-      "nameUser": "23dereek",
+      "id": "1fca",
+      "idUsuario": "873e",
+      "nameUser": "Kevin",
       "nombreServicio": "Servicio1",
-      "habilidad": "Programación",
-      "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - El Carmen",
+      "habilidad": "Marketing Digital",
+      "ubicacion": "SAN JOSÉ - CANTÓN 2 - ALAJUELITA - Concepción",
       "modalidad": "virtual",
-      "horasDisponibles": "3"
-    },
-    {
-      "id": "d4b3",
-      "idUsuario": "0438",
-      "nameUser": "23dereek",
-      "nombreServicio": "Hola",
-      "habilidad": "Programación",
-      "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - Catedral",
-      "modalidad": "virtual",
-      "horasDisponibles": "20"
+      "horasDisponibles": 2,
+      "tipoServicio": "normal"
     }
   ],
   "tratos": [
-
+    {
+      "id": "6677",
+      "serviceId": "535c",
+      "buyerId": "873e",
+      "buyerName": "Kevin",
+      "sellerId": "7456",
+      "sellerName": "23dereek",
+      "hours": 2,
+      "type": "trade"
+    },
+    {
+      "id": "e073",
+      "serviceId": "535c",
+      "buyerId": "873e",
+      "buyerName": "Kevin",
+      "sellerId": "7456",
+      "sellerName": "23dereek",
+      "hours": 1,
+      "type": "trade"
+    },
+    {
+      "id": "34c6",
+      "serviceId": "535c",
+      "buyerId": "873e",
+      "buyerName": "Kevin",
+      "sellerId": "7456",
+      "sellerName": "23dereek",
+      "hours": 3,
+      "type": "trade"
+    },
+    {
+      "id": "bf26",
+      "serviceId": "1fca",
+      "buyerId": "7456",
+      "buyerName": "23dereek",
+      "sellerId": "873e",
+      "sellerName": "Kevin",
+      "hours": 1,
+      "type": "trade"
+    },
+    {
+      "id": "c221",
+      "serviceId": "1fca",
+      "buyerId": "7456",
+      "buyerName": "23dereek",
+      "sellerId": "873e",
+      "sellerName": "Kevin",
+      "hours": 1,
+      "type": "trade"
+    }
   ]
 }

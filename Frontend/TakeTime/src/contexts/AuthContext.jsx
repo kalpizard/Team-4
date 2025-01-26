@@ -11,6 +11,8 @@ export const AuthProvider = ({ children }) => {
   const [update, setUpdate] = useState(0);
   const [userSession, setUserSession] = useState({});
 
+  
+
   const AuthUser = async () => {
     const accessToken = document.cookie
       .split('; ')
@@ -24,7 +26,6 @@ export const AuthProvider = ({ children }) => {
     try {
       const decodedPayload = KJUR.jws.JWS.parse(accessToken).payloadObj;
       const user = await getData(`http://localhost:3001/usuarios/${decodedPayload.username.id}`)
-      console.log(user.data);
       return user.data
     } catch (error) {
       console.log(error);
