@@ -5,16 +5,16 @@ export const Footer = () => {
     <div className="container mx-auto px-4">
       <div className="flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0">
-          <h5 className="text-lg font-semibold">My Website</h5>
+          <h5 className="text-lg font-semibold">TakeTime</h5>
           <p className="text-sm">&copy; {new Date().getFullYear()} All rights reserved.</p>
         </div>
 
 
         <div className="flex space-x-4">
-          <a href="#" className="hover:text-white">Home</a>
-          <a href="#" className="hover:text-white">About</a>
-          <a href="#" className="hover:text-white">Services</a>
-          <a href="#" className="hover:text-white">Contact</a>
+          <a href="#" className="hover:text-white">Inicio</a>
+          <a href="#" className="hover:text-white">Nosotros</a>
+        
+   
         </div>
 
 

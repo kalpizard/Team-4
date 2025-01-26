@@ -8,8 +8,9 @@ export const AuthLayout = ({ children, title = '' }) => {
                     <div>
                        
                         <div className="max-w-lg mt-16 max-lg:hidden">
-                            <h3 className="text-3xl font-bo font'black ">Sign in</h3>
-                            <p className="text-sm mt-4 ">Embark on a seamless journey as you sign in to your account. Unlock a realm of opportunities and possibilities that await you.</p>
+                            
+                            <h3 className="text-3xl font-bo font'black ">Empecemos a construir juntos</h3>
+                            <p className="text-sm mt-4 ">Aqui compartimos habilidades, apoyamos a otros y creamos comunidad</p>
                         </div>
                     </div>
 

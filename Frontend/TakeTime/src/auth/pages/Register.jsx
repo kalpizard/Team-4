@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { getData } from '../../services/axios';
 import { AuthLayout } from '../layout/AuthLayout';
 
-export const Register = ({ children, title = 'Sign In' }) => {
+export const Register = ({ children, title = 'Registrarme' }) => {
   const navigate = useNavigate();
   const [newPassword, setnewPassword] = useState('');
   const url = 'http://localhost:3001/usuarios'
@@ -70,60 +70,60 @@ export const Register = ({ children, title = 'Sign In' }) => {
     <AuthLayout>
       <form onSubmit={FuncRegis}>
         <div className="mb-8">
-          <h3 className="text-3xl font-extrabold text-gray-800">Register</h3>
+          <h3 className="text-3xl font-extrabold text-gray-800">Registro</h3>
         </div>
      
         <div className="space-y-4">
           <div>
-            <label className="text-gray-800 text-sm mb-2 block">Name</label>
+            <label className="text-gray-800 text-sm mb-2 block">Nombre</label>
             <input
               id="name"
               name="name"
               type="text"
               value={name}
               onChange={handleChange}
-              placeholder="Enter your name"
+              placeholder="Escriba su nombre"
               className="w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
               required
             />
           </div>
 
           <div>
-            <label className="text-gray-800 text-sm mb-2 block">Email</label>
+            <label className="text-gray-800 text-sm mb-2 block">Correo</label>
             <input
               id="email"
               name="email"
               type="email"
               value={email}
               onChange={handleChange}
-              placeholder="Enter your email"
+              placeholder="Escriba su correo"
               className="w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
               required
             />
           </div>
           <div>
-            <label className="text-gray-800 text-sm mb-2 block">Password</label>
+            <label className="text-gray-800 text-sm mb-2 block">Contraseña</label>
             <input
               id="password"
               name="password"
               type="password"
               value={password}
               onChange={handleChange}
-              placeholder="Enter your password"
+              placeholder="Escriba su contraseña"
               className="w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
               required
             />
           </div>
 
           <div>
-            <label className="text-gray-800 text-sm mb-2 block">Confirm Password</label>
+            <label className="text-gray-800 text-sm mb-2 block">Confirmar contraseña</label>
             <input
               id="ConfirmarPassword"
               name="password"
               type="password"
               value={newPassword}
               onChange={(e) => setnewPassword(e.target.value)}
-              placeholder="Confirm your password"
+              placeholder="Confimar su contraseña"
               className="w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
               required
             />
@@ -140,12 +140,12 @@ export const Register = ({ children, title = 'Sign In' }) => {
         </div>
 
         <p className="text-sm mt-6 text-center text-gray-800">
-          Already have an account?{' '}
+          Ya tienes una cuenta?{' '}
           <Link
             className="text-blue-600 font-semibold hover:underline ml-1"
             to="/login"
           >
-            Log in here
+            Crear cuenta
           </Link>
         </p>
       </form>

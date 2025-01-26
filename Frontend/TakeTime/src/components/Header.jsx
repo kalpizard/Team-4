@@ -10,9 +10,9 @@ export const Header = () => {
   const location = useLocation();
 
   const pagesList = [
-    { path: '/home', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/faq', label: 'Faq' },
+    { path: '/home', label: 'Inicio' },
+    { path: '/about', label: 'Nosotros' },
+    { path: '/faq', label: 'Preguntas' },
   ];
 
   const navigate = useNavigate();
@@ -110,14 +110,15 @@ export const Header = () => {
               onClick={handleLogout}
               className='px-4 py-2 bg-rose-500 text-white rounded-md hover:bg-rose-600 transition-colors'
             >
-              Logout
+              Cerrar sesion
             </button>
           </div>
         </>
       ) : (
         <>
-          <Link to={'/login'}>Login</Link>
-          <Link to={'/register'}>Resgister</Link>
+        
+          <Link className='mx-2' to={'/login'}>Crear cuenta</Link>
+          <Link className='mx-2'  to={'/register'}>Resgistrarse</Link>
         </>
       )}
     </header>

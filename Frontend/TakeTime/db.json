@@ -5,14 +5,14 @@
       "name": "23dereek",
       "email": "dereknogera9@gmail.com",
       "password": "1",
-      "hora": 0
+      "hora": 1
     },
     {
       "id": "74f4",
       "name": "derek2",
       "email": "dereknogera911@gmail.com",
       "password": "1",
-      "hora": 8
+      "hora": 7
     },
     {
       "id": "5e13",
@@ -43,6 +43,17 @@
       "ubicacion": "SAN JOSÉ - CANTÓN 4 - GOICOECHEA - San José de la Montaña",
       "modalidad": "virtual",
       "horasDisponibles": "5",
+      "tipoServicio": "normal"
+    },
+    {
+      "id": "9c14",
+      "idUsuario": "d1f3",
+      "nameUser": "23dereek",
+      "nombreServicio": "asas",
+      "habilidad": "Programación",
+      "ubicacion": "SAN JOSÉ - CANTÓN 4 - GOICOECHEA - Pococí",
+      "modalidad": "virtual",
+      "horasDisponibles": 7,
       "tipoServicio": "normal"
     }
   ],
@@ -154,6 +165,16 @@
       "buyerName": "23dereek",
       "sellerId": "74f4",
       "sellerName": "derek2",
+      "hours": 1,
+      "type": "trade"
+    },
+    {
+      "id": "00e9",
+      "serviceId": "9c14",
+      "buyerId": "74f4",
+      "buyerName": "derek2",
+      "sellerId": "d1f3",
+      "sellerName": "23dereek",
       "hours": 1,
       "type": "trade"
     }
