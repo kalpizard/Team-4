@@ -155,26 +155,30 @@ export const ListServices = () => {
 
   return (
     <>
-      <div>
-        <h1>Lista de Servicios</h1>
+    
+      <div className="bg-white p-4 text-black ">
+      
         {error && <p style={{ color: "red" }}>Error: {error}</p>}
-        <ul>
+        <ul className="">
           {services.length > 0 ? (
             services.map((service) => (
               <li key={service.id}>
-                <h1>Creado por: {service.nameUser}</h1>
-                <h1>Nombre del servicio: {service.nombreServicio}</h1>
-                <h1>Habilidad: {service.habilidad}</h1>
-                <h2>Ubicacion: {service.ubicacion}</h2>
-                <h3>Modalidad: {service.modalidad}</h3>
-                <h5>Horas Disponibles: {service.horasDisponibles}</h5>
-                <hr />
+                <h1 className="font-black">Creado por: {service.nameUser}</h1>
+                <h1 className="font-semibold">Nombre del servicio: {service.nombreServicio}</h1>
+                <h1 className="font-semibold">Habilidad: {service.habilidad}</h1>
+                <h2 className="font-semibold" >Ubicacion: {service.ubicacion}</h2>
+                <h3 className="font-semibold">Modalidad: {service.modalidad}</h3>
+                <h5 className="font-semibold">Horas Disponibles: {service.horasDisponibles}</h5>
+                
                 <button
-                  className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
+                class="focus:outline-none my bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
                   onClick={() => openTrade(service)}
                 >
                   Realizar trato
                 </button>
+               <div className="py-2">
+               <hr />
+               </div>
               </li>
             ))
           ) : (
@@ -188,23 +192,25 @@ export const ListServices = () => {
         Open={openTradeModal}
         Close={() => setOpenTradeModal(false)}
       >
-        <h2 className="text-xl font-bold">Intercambiar Horas</h2>
-        <p>Servicio: {selectedService?.nombreServicio}</p>
+        <h2 className="text-xl text-black font-bold">Intercambiar Horas</h2>
+        <p className="text-black ">Servicio: {selectedService?.nombreServicio}</p>
         <p>Horas disponibles: {selectedService?.horasDisponibles}</p>
         <input
           type="number"
-          className="border rounded p-2 mt-2 w-full"
+          className="border rounded text-black  p-2 mt-2 w-full"
           placeholder="Horas a intercambiar"
           value={hours}
           onChange={(e) => setHours(Number(e.target.value))}
         />
         <button
-          className="bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600 mt-4"
+          className="bg-green-500 py-2 px-4 rounded-lg hover:bg-green-600 mt-4"
           onClick={handleTrade}
         >
           Confirmar
         </button>
       </Modal>
+
+
     </>
   );
 };

@@ -101,12 +101,14 @@
 //     </div>
 //   );
 // };
+
+
 import { useAuthContext } from "../../contexts/AuthContext.jsx";
 import { useState, useEffect } from "react";
 import ServiceForm from "./components/ServiceForm";
 import { useServices } from "../../contexts/ServicesContext.jsx";
 import axios from "axios";
-
+import Modal from "../ui/Modal.jsx";
 export const SideBar = () => {
   const { userSession } = useAuthContext();
   const [modalCreateService, setModalCreateService] = useState(false);
@@ -152,7 +154,14 @@ export const SideBar = () => {
       return;
     }
 
-    if (!nombreServicio || !habilidadSeleccionada || !ubicacion || !modalidad || !horasDisponibles || !tipoServicio) {
+    if (
+      !nombreServicio ||
+      !habilidadSeleccionada ||
+      !ubicacion ||
+      !modalidad ||
+      !horasDisponibles ||
+      !tipoServicio
+    ) {
       alert("Por favor, complete todos los campos.");
       return;
     }
@@ -181,11 +190,19 @@ export const SideBar = () => {
   };
 
   return (
-    <div>
-      <input onClick={createService} type="button" value="Crear servicio" />
+    <div className="flex justify-center items-center w-full py-6 bg-sky h-full hover:bg-sky-200 text-2xl font-black">
+      {!modalCreateService && ( // Oculta el botón cuando el modal está abierto
+        <input
+          onClick={createService}
+          type="button"
+          value="Crear servicio"
+        />
+      )}
       {modalCreateService && (
-        <div>
-          <h2>Crear Nuevo Servicio</h2>
+      
+        <div className="w-full h-full">
+          
+          <h2 >Crear Nuevo Servicio</h2>
           <ServiceForm
             nombreServicio={nombreServicio}
             setNombreServicio={setNombreServicio}
@@ -202,8 +219,14 @@ export const SideBar = () => {
             tipoServicio={tipoServicio} // Pasamos tipo de servicio
             setTipoServicio={setTipoServicio} // Pasamos setTipoServicio
           />
-          <button onClick={handleSubmit}>Crear Servicio</button>
-          <button onClick={createService}>Cerrar Modal</button>
+<div className="flex justify-start items-center">
+
+
+
+          <button className="mx-2 focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900" onClick={createService}>Cerrar Modal</button>
+          <button className=" mx-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" onClick={handleSubmit}>Crear Servicio</button>
+</div>
+
         </div>
       )}
     </div>

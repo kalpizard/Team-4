@@ -41,6 +41,50 @@
       "modalidad": "virtual",
       "horasDisponibles": 2,
       "tipoServicio": "normal"
+    },
+    {
+      "id": "569b",
+      "idUsuario": "7456",
+      "nameUser": "23dereek",
+      "nombreServicio": "aa",
+      "habilidad": "Programación",
+      "ubicacion": "SAN JOSÉ - CANTÓN 3 - DESAMPARADOS - San Rafael Arriba",
+      "modalidad": "presencial",
+      "horasDisponibles": "7",
+      "tipoServicio": "normal"
+    },
+    {
+      "id": "bffe",
+      "idUsuario": "7456",
+      "nameUser": "23dereek",
+      "nombreServicio": "ke",
+      "habilidad": "Programación",
+      "ubicacion": "e",
+      "modalidad": "presencial",
+      "horasDisponibles": "6",
+      "tipoServicio": "donador"
+    },
+    {
+      "id": "b9a9",
+      "idUsuario": "7456",
+      "nameUser": "23dereek",
+      "nombreServicio": "ss",
+      "habilidad": "Programación",
+      "ubicacion": "SAN JOSÉ - CANTÓN 4 - GOICOECHEA - Pococí",
+      "modalidad": "presencial",
+      "horasDisponibles": "7",
+      "tipoServicio": "donador"
+    },
+    {
+      "id": "7cc4",
+      "idUsuario": "7456",
+      "nameUser": "23dereek",
+      "nombreServicio": "aa",
+      "habilidad": "Programación",
+      "ubicacion": "SAN JOSÉ - CANTÓN 5 - MORA - Escazú",
+      "modalidad": "presencial",
+      "horasDisponibles": "8",
+      "tipoServicio": "normal"
     }
   ],
   "tratos": [

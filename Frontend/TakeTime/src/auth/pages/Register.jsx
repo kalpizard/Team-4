@@ -72,7 +72,7 @@ export const Register = ({ children, title = 'Sign In' }) => {
         <div className="mb-8">
           <h3 className="text-3xl font-extrabold text-gray-800">Register</h3>
         </div>
-
+     
         <div className="space-y-4">
           <div>
             <label className="text-gray-800 text-sm mb-2 block">Name</label>
