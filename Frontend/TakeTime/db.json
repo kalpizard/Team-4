@@ -5,7 +5,7 @@
       "name": "23dereek",
       "email": "dereknogera9@gmail.com",
       "password": "1",
-      "hora": 8,
+      "hora": -4,
       "id": "7456"
     },
     {
@@ -13,7 +13,7 @@
       "name": "Kevin",
       "email": "dereknogera91@gmail.com",
       "password": "1",
-      "hora": 11
+      "hora": 13
     }
   ],
   "habilidades": [
@@ -31,28 +31,6 @@
     }
   ],
   "servicios": [
-    {
-      "id": "1fca",
-      "idUsuario": "873e",
-      "nameUser": "Kevin",
-      "nombreServicio": "Servicio1",
-      "habilidad": "Marketing Digital",
-      "ubicacion": "SAN JOSÉ - CANTÓN 2 - ALAJUELITA - Concepción",
-      "modalidad": "virtual",
-      "horasDisponibles": 2,
-      "tipoServicio": "normal"
-    },
-    {
-      "id": "569b",
-      "idUsuario": "7456",
-      "nameUser": "23dereek",
-      "nombreServicio": "aa",
-      "habilidad": "Programación",
-      "ubicacion": "SAN JOSÉ - CANTÓN 3 - DESAMPARADOS - San Rafael Arriba",
-      "modalidad": "presencial",
-      "horasDisponibles": "7",
-      "tipoServicio": "normal"
-    },
     {
       "id": "bffe",
       "idUsuario": "7456",
@@ -84,6 +62,28 @@
       "ubicacion": "SAN JOSÉ - CANTÓN 5 - MORA - Escazú",
       "modalidad": "presencial",
       "horasDisponibles": "8",
+      "tipoServicio": "normal"
+    },
+    {
+      "id": "e9e4",
+      "idUsuario": "7456",
+      "nameUser": "23dereek",
+      "nombreServicio": "Jardineria ",
+      "habilidad": "Marketing Digital",
+      "ubicacion": "PUNTARENAS - CANTÓN 3 - SANTA TERESA - Montelimar",
+      "modalidad": "virtual",
+      "horasDisponibles": "7",
+      "tipoServicio": "normal"
+    },
+    {
+      "id": "bd2e",
+      "idUsuario": "873e",
+      "nameUser": "Kevin",
+      "nombreServicio": "cocinera",
+      "habilidad": "Programación",
+      "ubicacion": "PUNTARENAS - CANTÓN 1 - PUNTARENAS - Chacarita",
+      "modalidad": "virtual",
+      "horasDisponibles": "4",
       "tipoServicio": "normal"
     }
   ],
@@ -136,6 +136,36 @@
       "sellerId": "873e",
       "sellerName": "Kevin",
       "hours": 1,
+      "type": "trade"
+    },
+    {
+      "id": "5265",
+      "serviceId": "1fca",
+      "buyerId": "7456",
+      "buyerName": "23dereek",
+      "sellerId": "873e",
+      "sellerName": "Kevin",
+      "hours": 2,
+      "type": "trade"
+    },
+    {
+      "id": "97d4",
+      "serviceId": "7b81",
+      "buyerId": "7456",
+      "buyerName": "23dereek",
+      "sellerId": "873e",
+      "sellerName": "Kevin",
+      "hours": 10,
+      "type": "trade"
+    },
+    {
+      "id": "d97a",
+      "serviceId": "569b",
+      "buyerId": "7456",
+      "buyerName": "23dereek",
+      "sellerId": "7456",
+      "sellerName": "23dereek",
+      "hours": 10,
       "type": "trade"
     }
   ]

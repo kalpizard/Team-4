@@ -7,7 +7,7 @@ import { AuthLayout } from '../layout/AuthLayout.jsx';
 import { Link } from 'react-router-dom';
 import { useAuthContext } from '../../contexts/AuthContext.jsx';
 
-export const Login = ({ children, title = "Login" }) => {
+export const Login = ({ children, title = "Iniciar sesion" }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const secretKey = 'cocodeVersion';
@@ -82,7 +82,7 @@ export const Login = ({ children, title = "Login" }) => {
         </div>
       
         <div>
-          <label className='text-gray-800 text-sm mb-2 block'>User name</label>
+          <label className='text-gray-800 text-sm mb-2 block'>Nombre de usuario</label>
           <div className='relative flex items-center'>
             <input
               autoComplete='off'
@@ -92,7 +92,7 @@ export const Login = ({ children, title = "Login" }) => {
               id='username'
               name='username'
               className='w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-md outline-blue-600'
-              placeholder='Enter user name'
+              placeholder='ingrese su usuario'
               required
             />
             <svg
@@ -109,7 +109,7 @@ export const Login = ({ children, title = "Login" }) => {
         </div>
 
         <div className='mt-4'>
-          <label className='text-gray-800 text-sm mb-2 block'>Password</label>
+          <label className='text-gray-800 text-sm mb-2 block'>Contraseña</label>
           <div className='relative flex items-center'>
             <input
               name='password'
@@ -118,7 +118,7 @@ export const Login = ({ children, title = "Login" }) => {
               onChange={(e) => setPassword(e.target.value)}
               id='password'
               className='w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-md outline-blue-600'
-              placeholder='Enter password'
+              placeholder='ingrese su contraseña'
               required
             />
             <svg
@@ -133,27 +133,19 @@ export const Login = ({ children, title = "Login" }) => {
           </div>
         </div>
 
-        <div className='mt-4 text-right'>
-          <a
-            href='#'
-            onClick={(e) => e.preventDefault()}
-            className='text-blue-600 text-sm font-semibold hover:underline'
-          >
-            Forgot your password?
-          </a>
-        </div>
+  
 
         <div className='mt-8'>
           <button
             type='submit'
             className='w-full shadow-xl py-2.5 px-4 text-sm font-semibold rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none'
           >
-            Log in
+            iniciar sesion
           </button>
         </div>
 
         <p className='text-sm mt-6 text-center text-gray-800'>
-          Don't have an account{' '}
+          no tengo una cuenta{' '}
           {/* <a href="#" onClick={(e) => e.preventDefault()} className="text-blue-600 font-semibold hover:underline ml-1">
 =======
           <a
@@ -167,7 +159,7 @@ export const Login = ({ children, title = "Login" }) => {
           <Link
             className="text-blue-600 font-semibold hover:underline ml-1"
             to="/register"  >
-            Register here
+            Registrarme
 
           </Link>
 
