@@ -3,26 +3,24 @@ import { ListServices } from '../../components/LoginSideBar/ListServices';
 
 export const PrincipalPage = () => {
   return (
-    <div className="flex w-screen h-screen">
+  <div className="flex w-screen h-screen">
       {/* Sidebar a la izquierda */}
-      
-      <div className="w-1/4 bg-sky-50  flex justify-center items-center">
-   
+      <div className="w-2/6 bg-sky-100 flex justify-center items-center">
         <SideBar />
       </div>
 
-      {/* Contenido principal a la derecha */}
-      <div className="flex-1 bg-lime-300 flex flex-col">
-        <div className="h-full bg-black text-white p-4">
-         
-        <ListServices />
+      {/* Contenido principal */}
+      <div className="flex-1 bg-lime-300 relative">
+        {/* Contenedor posicionado */}
+        <div className="absolute top-0 left-0 right-0 bottom-0 bg-white text-white overflow-auto">
+          <ListServices />
         </div>
-     
       </div>
-      <div className="w-1/4 bg-sky-50   bg-gray-800 text-white">
-   ffff
-   
- </div>
+
+      {/* Otro contenido a la derecha */}
+      <div className="w-2/6 bg-sky-100 text-white">
+       
+      </div>
     </div>
   );
 };

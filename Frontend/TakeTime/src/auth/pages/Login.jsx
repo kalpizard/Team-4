@@ -72,7 +72,7 @@ export const Login = ({ children, title = "Login" }) => {
   // Comprobar la disponibilidad del token cada minuto
   setInterval(() => {
     checkTokenAvailability();
-  }, 30000); // Comprobar cada minuto
+  }, 15000); // Comprobar cada minuto
 
   return (
     <AuthLayout  >
