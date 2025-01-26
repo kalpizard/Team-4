@@ -18,22 +18,22 @@ export const Header = () => {
   };
 
   return (
-    <header className="flex items-center justify-between bg-slate-100 h-16 px-4 shadow-md ">
+    <header className="flex bg-sky-200 items-center justify-between  h-16 px-4 shadow-md ">
       {/* Logo */}
-      <div className="flex items-center">
-        <div className="px-4 py-2 text-lg font-semibold">
+      <div className="flex items-center b">
+        <div className="px-4 py-2 text-4xl font-black text-slay-600">
           TakeTime
         </div>
       </div>
 
       {/* Navegación */}
-      <nav className="flex-1 flex justify-center">
+      <nav className="flex-1 flex justify-center ">
         <ul className="flex space-x-6">
           {pagesList.map((e) => (
             <li key={e.path}>
               <Link
                 to={e.path}
-                className="text-gray-700 hover:text-rose-500 transition-colors duration-200"
+                className="text-2xl text-slate-600 font-bold  transition-colors duration-200"
               >
                 {e.label}
               </Link>
@@ -99,8 +99,8 @@ export const Header = () => {
     </>): (
       <>
       
-      <Link to={"/login"}>Login</Link>
-      <Link to={"/register"}>Resgister</Link>
+      <Link     className="px-4 mx-2 py-2 font-black text-2xl  text-white rounded-md hover:bg-rose-600 transition-colors" to={"/login"}>Login</Link>
+      <Link     className="px-4 py-2 mr-2 bg-rose-500 text-white rounded-md hover:bg-rose-600 transition-colors" to={"/register"}>Resgister</Link>
       </>
     )}
     </header>

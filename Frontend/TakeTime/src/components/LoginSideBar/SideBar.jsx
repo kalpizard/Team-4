@@ -190,10 +190,10 @@ export const SideBar = () => {
   };
 
   return (
-    <div>
-      <input onClick={createService} type="button" value="Crear servicio" />
+    <div className="flex justify-center items-center w-full py-6 bg-sky-100 hover:bg-sky-200 text-2xl font-black" >
+      <input  onClick={createService} type="button" value="Crear servicio" />
       {modalCreateService && (
-        <div>
+        <div >
           <h2>Crear Nuevo Servicio</h2>
           <ServiceForm
             nombreServicio={nombreServicio}

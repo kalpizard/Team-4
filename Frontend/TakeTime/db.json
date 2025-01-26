@@ -20,6 +20,13 @@
       "email": "ggggg@fdd",
       "password": "12",
       "hora": 10
+    },
+    {
+      "id": "0698",
+      "name": "yordy",
+      "email": "yordy@mar",
+      "password": "13",
+      "hora": 10
     }
   ],
   "habilidades": [
@@ -46,6 +53,16 @@
       "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - El Carmen",
       "modalidad": "virtual",
       "horasDisponibles": "3"
+    },
+    {
+      "id": "cd5a",
+      "idUsuario": "0438",
+      "nameUser": "23dereek",
+      "nombreServicio": "a",
+      "habilidad": "Programación",
+      "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - El Carmen",
+      "modalidad": "virtual",
+      "horasDisponibles": "2"
     }
   ],
   "tratos": [
