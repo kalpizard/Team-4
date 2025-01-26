@@ -37,6 +37,26 @@
     }
   ],
   "servicios": [
+    {
+      "id": "c735",
+      "idUsuario": "0438",
+      "nameUser": "23dereek",
+      "nombreServicio": "Servicio1",
+      "habilidad": "Programación",
+      "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - El Carmen",
+      "modalidad": "virtual",
+      "horasDisponibles": "3"
+    },
+    {
+      "id": "d4b3",
+      "idUsuario": "0438",
+      "nameUser": "23dereek",
+      "nombreServicio": "Hola",
+      "habilidad": "Programación",
+      "ubicacion": "SAN JOSÉ - CANTÓN 1 - SAN JOSÉ - Catedral",
+      "modalidad": "virtual",
+      "horasDisponibles": "20"
+    }
   ],
   "tratos": [
 
