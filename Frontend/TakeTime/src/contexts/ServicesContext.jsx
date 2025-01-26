@@ -20,7 +20,7 @@ export const ServicesProvider = ({ children }) => {
     };
 
     fetchServices();
-  }, []);
+  }, [updateService]);
 
   const addService = async (newService) => {
     try {
