@@ -1,19 +1,18 @@
 {
   "usuarios": [
     {
-      "buyerId": "7456",
+      "id": "d1f3",
       "name": "23dereek",
       "email": "dereknogera9@gmail.com",
       "password": "1",
-      "hora": 8,
-      "id": "7456"
+      "hora": 4
     },
     {
-      "id": "873e",
-      "name": "Kevin",
-      "email": "dereknogera91@gmail.com",
+      "id": "74f4",
+      "name": "derek2",
+      "email": "dereknogera911@gmail.com",
       "password": "1",
-      "hora": 11
+      "hora": 6
     }
   ],
   "habilidades": [
@@ -32,65 +31,25 @@
   ],
   "servicios": [
     {
-      "id": "1fca",
-      "idUsuario": "873e",
-      "nameUser": "Kevin",
-      "nombreServicio": "Servicio1",
-      "habilidad": "Marketing Digital",
-      "ubicacion": "SAN JOSÉ - CANTÓN 2 - ALAJUELITA - Concepción",
+      "id": "af6e",
+      "idUsuario": "74f4",
+      "nameUser": "derek2",
+      "nombreServicio": "DJja",
+      "habilidad": "Programación",
+      "ubicacion": "SAN JOSÉ - CANTÓN 2 - ALAJUELITA - Alajuelita",
       "modalidad": "virtual",
-      "horasDisponibles": 2,
+      "horasDisponibles": 3,
       "tipoServicio": "normal"
     }
   ],
   "tratos": [
     {
-      "id": "6677",
-      "serviceId": "535c",
-      "buyerId": "873e",
-      "buyerName": "Kevin",
-      "sellerId": "7456",
-      "sellerName": "23dereek",
-      "hours": 2,
-      "type": "trade"
-    },
-    {
-      "id": "e073",
-      "serviceId": "535c",
-      "buyerId": "873e",
-      "buyerName": "Kevin",
-      "sellerId": "7456",
-      "sellerName": "23dereek",
-      "hours": 1,
-      "type": "trade"
-    },
-    {
-      "id": "34c6",
-      "serviceId": "535c",
-      "buyerId": "873e",
-      "buyerName": "Kevin",
-      "sellerId": "7456",
-      "sellerName": "23dereek",
-      "hours": 3,
-      "type": "trade"
-    },
-    {
-      "id": "bf26",
-      "serviceId": "1fca",
-      "buyerId": "7456",
+      "id": "3bc1",
+      "serviceId": "af6e",
+      "buyerId": "d1f3",
       "buyerName": "23dereek",
-      "sellerId": "873e",
-      "sellerName": "Kevin",
-      "hours": 1,
-      "type": "trade"
-    },
-    {
-      "id": "c221",
-      "serviceId": "1fca",
-      "buyerId": "7456",
-      "buyerName": "23dereek",
-      "sellerId": "873e",
-      "sellerName": "Kevin",
+      "sellerId": "74f4",
+      "sellerName": "derek2",
       "hours": 1,
       "type": "trade"
     }
