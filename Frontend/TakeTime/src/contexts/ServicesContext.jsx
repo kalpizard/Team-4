@@ -1,25 +1,33 @@
-import { createContext, useContext, useState, useEffect } from "react";
-import axios from "axios";
+import { createContext, useContext, useState, useEffect, useRef } from 'react';
+import axios from 'axios';
 
 const ServicesContext = createContext();
 
 export const ServicesProvider = ({ children }) => {
-  const [updateService, setUpdateService] = useState(0)
+  const searchTerm = useRef();
+  const [updateService, setUpdateService] = useState(0);
   const [services, setServices] = useState([]);
   const [error, setError] = useState(null);
-  const url = "http://localhost:3001/servicios";
+  const url = 'http://localhost:3001/servicios';
+
+  const fetchServices = async () => {
+    try {
+      const response = await axios.get(url);
+      return response.data;
+    } catch (err) {
+      setError(err.message);
+    }
+  };
 
   useEffect(() => {
-    const fetchServices = async () => {
-      try {
-        const response = await axios.get(url);
-        setServices(response.data);
-      } catch (err) {
-        setError(err.message);
-      }
-    };
-
-    fetchServices();
+    fetchServices().then((e) => {
+      let filtered = e.filter((i) =>
+        i.nombreServicio
+          .toLowerCase()
+          .includes(searchTerm.current.value.toLowerCase())
+      );
+      setServices(filtered);
+    });
   }, [updateService]);
 
   const addService = async (newService) => {
@@ -27,12 +35,21 @@ export const ServicesProvider = ({ children }) => {
       const response = await axios.post(url, newService);
       setServices((prev) => [...prev, response.data]);
     } catch (err) {
-      console.error("Error al agregar el servicio:", err);
+      console.error('Error al agregar el servicio:', err);
     }
   };
 
   return (
-    <ServicesContext.Provider value={{ services, error, addService, updateService, setUpdateService }}>
+    <ServicesContext.Provider
+      value={{
+        services,
+        error,
+        addService,
+        updateService,
+        setUpdateService,
+        searchTerm,
+      }}
+    >
       {children}
     </ServicesContext.Provider>
   );
