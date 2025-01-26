@@ -14,7 +14,7 @@ export const refreshAccessToken = () => {
   if (refreshToken) {
     try {
       // Usamos el refresh token para generar un nuevo access token
-      const decodedPayload = KJUR.jws.JWS.parse(refreshToken).payload;
+      const decodedPayload = KJUR.jws.JWS.parse(refreshToken).payloadObj;
       const newAccessToken = KJUR.jws.JWS.sign(
         'HS256',
         { alg: 'HS256', typ: 'JWT' },
@@ -40,7 +40,9 @@ export const checkTokenAvailability = () => {
     ?.split('=')[1];
 
   if (!accessToken) {
-    console.log('No hay access token, usando refresh token para generar uno nuevo.');
+    console.log(
+      'No hay access token, usando refresh token para generar uno nuevo.'
+    );
     refreshAccessToken(); // Llamar a la función que refresca el token
   }
 };
