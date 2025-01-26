@@ -246,7 +246,7 @@ const ServiceForm = ({
               </option>
             ))}
           </select>
-          <div className="absolute z-40 right-2 top-1/2 transform -translate-y-1/2 group">
+          <div className="absolute right-2 top-1/2 transform -translate-y-1/2 group">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -259,7 +259,7 @@ const ServiceForm = ({
                 clipRule="evenodd"
               />
             </svg>
-            <div className="absolute w-32  hidden group-hover:block bg-gray-100 text-black text-xs p-2 rounded shadow-lg">
+            <div className="absolute   hidden group-hover:block bg-gray-100 text-black text-xs p-2 rounded shadow-lg">
               Selecciona cuántas horas puedes ofrecer.
             </div>
           </div>

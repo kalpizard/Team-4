@@ -153,7 +153,8 @@ export const SideBar = () => {
     if (!userSession) {
       return;
     }
-
+    console.log("hpñas");
+    
     if (
       !nombreServicio ||
       !habilidadSeleccionada ||
@@ -201,7 +202,6 @@ export const SideBar = () => {
       {modalCreateService && (
       
         <div className="w-full h-full">
-          
           <h2 >Crear Nuevo Servicio</h2>
           <ServiceForm
             nombreServicio={nombreServicio}
