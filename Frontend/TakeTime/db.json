@@ -5,14 +5,157 @@
       "name": "23dereek",
       "email": "dereknogera9@gmail.com",
       "password": "1",
-      "hora": 4
+      "hora": 0
     },
     {
       "id": "74f4",
       "name": "derek2",
       "email": "dereknogera911@gmail.com",
       "password": "1",
-      "hora": 6
+      "hora": 8
+    },
+    {
+      "id": "5e13",
+      "name": "Kevin",
+      "email": "dereknoger11a9@gmail.com",
+      "password": "1",
+      "hora": 5
+    }
+  ],
+  "servicios": [
+    {
+      "id": "69e3",
+      "idUsuario": "74f4",
+      "nameUser": "derek2",
+      "nombreServicio": "aas",
+      "habilidad": "Desarrollo de Aplicaciones Móviles",
+      "ubicacion": "SAN JOSÉ - CANTÓN 6 - MORAVIA - San Isidro",
+      "modalidad": "virtual",
+      "horasDisponibles": 1,
+      "tipoServicio": "normal"
+    },
+    {
+      "id": "4dcf",
+      "idUsuario": "d1f3",
+      "nameUser": "23dereek",
+      "nombreServicio": "Diseño",
+      "habilidad": "Diseño Gráfico",
+      "ubicacion": "SAN JOSÉ - CANTÓN 4 - GOICOECHEA - San José de la Montaña",
+      "modalidad": "virtual",
+      "horasDisponibles": "5",
+      "tipoServicio": "normal"
+    }
+  ],
+  "tratos": [
+    {
+      "id": "5bb7",
+      "serviceId": "39c0",
+      "buyerId": "74f4",
+      "buyerName": "derek2",
+      "sellerId": "d1f3",
+      "sellerName": "23dereek",
+      "hours": 1,
+      "type": "trade"
+    },
+    {
+      "id": "1d4b",
+      "serviceId": "39c0",
+      "buyerId": "74f4",
+      "buyerName": "derek2",
+      "sellerId": "d1f3",
+      "sellerName": "23dereek",
+      "hours": 1,
+      "type": "trade"
+    },
+    {
+      "id": "d176",
+      "serviceId": "39c0",
+      "buyerId": "74f4",
+      "buyerName": "derek2",
+      "sellerId": "d1f3",
+      "sellerName": "23dereek",
+      "hours": 1,
+      "type": "trade"
+    },
+    {
+      "id": "25c3",
+      "serviceId": "39c0",
+      "buyerId": "74f4",
+      "buyerName": "derek2",
+      "sellerId": "d1f3",
+      "sellerName": "23dereek",
+      "hours": 1,
+      "type": "trade"
+    },
+    {
+      "id": "5e43",
+      "serviceId": "39c0",
+      "buyerId": "74f4",
+      "buyerName": "derek2",
+      "sellerId": "d1f3",
+      "sellerName": "23dereek",
+      "hours": 1,
+      "type": "trade"
+    },
+    {
+      "id": "82d9",
+      "serviceId": "69e3",
+      "buyerId": "d1f3",
+      "buyerName": "23dereek",
+      "sellerId": "74f4",
+      "sellerName": "derek2",
+      "hours": 0,
+      "type": "trade"
+    },
+    {
+      "id": "45f0",
+      "serviceId": "69e3",
+      "buyerId": "d1f3",
+      "buyerName": "23dereek",
+      "sellerId": "74f4",
+      "sellerName": "derek2",
+      "hours": 1,
+      "type": "trade"
+    },
+    {
+      "id": "8957",
+      "serviceId": "69e3",
+      "buyerId": "d1f3",
+      "buyerName": "23dereek",
+      "sellerId": "74f4",
+      "sellerName": "derek2",
+      "hours": 3,
+      "type": "trade"
+    },
+    {
+      "id": "3ab6",
+      "serviceId": "69e3",
+      "buyerId": "d1f3",
+      "buyerName": "23dereek",
+      "sellerId": "74f4",
+      "sellerName": "derek2",
+      "hours": 1,
+      "type": "trade"
+    },
+    {
+      "id": "fe2c",
+      "serviceId": "69e3",
+      "buyerId": "d1f3",
+      "buyerName": "23dereek",
+      "sellerId": "74f4",
+      "sellerName": "derek2",
+      "hours": 1,
+      "type": "trade"
+    },
+    {
+      "id": "95bf",
+      "serviceId": "69e3",
+      "buyerId": "d1f3",
+      "buyerName": "23dereek",
+      "sellerId": "74f4",
+      "sellerName": "derek2",
+      "hours": 1,
+      "type": "trade"
     }
   ],
   "habilidades": [
@@ -27,31 +170,394 @@
     {
       "id": "3",
       "nombre": "Marketing Digital"
-    }
-  ],
-  "servicios": [
+    },
     {
-      "id": "af6e",
-      "idUsuario": "74f4",
-      "nameUser": "derek2",
-      "nombreServicio": "DJja",
-      "habilidad": "Programación",
-      "ubicacion": "SAN JOSÉ - CANTÓN 2 - ALAJUELITA - Alajuelita",
-      "modalidad": "virtual",
-      "horasDisponibles": 3,
-      "tipoServicio": "normal"
-    }
-  ],
-  "tratos": [
+      "id": "4",
+      "nombre": "Desarrollo Web"
+    },
     {
-      "id": "3bc1",
-      "serviceId": "af6e",
-      "buyerId": "d1f3",
-      "buyerName": "23dereek",
-      "sellerId": "74f4",
-      "sellerName": "derek2",
-      "hours": 1,
-      "type": "trade"
+      "id": "5",
+      "nombre": "Desarrollo de Aplicaciones Móviles"
+    },
+    {
+      "id": "6",
+      "nombre": "Gestión de Proyectos"
+    },
+    {
+      "id": "7",
+      "nombre": "Redacción"
+    },
+    {
+      "id": "8",
+      "nombre": "Análisis de Datos"
+    },
+    {
+      "id": "9",
+      "nombre": "SEO"
+    },
+    {
+      "id": "10",
+      "nombre": "Copywriting"
+    },
+    {
+      "id": "11",
+      "nombre": "Fotografía"
+    },
+    {
+      "id": "12",
+      "nombre": "Edición de Video"
+    },
+    {
+      "id": "13",
+      "nombre": "Traducción"
+    },
+    {
+      "id": "14",
+      "nombre": "Finanzas Personales"
+    },
+    {
+      "id": "15",
+      "nombre": "Atención al Cliente"
+    },
+    {
+      "id": "16",
+      "nombre": "Ventas"
+    },
+    {
+      "id": "17",
+      "nombre": "Trabajo en Equipo"
+    },
+    {
+      "id": "18",
+      "nombre": "Gestión del Tiempo"
+    },
+    {
+      "id": "19",
+      "nombre": "Comunicación Asertiva"
+    },
+    {
+      "id": "20",
+      "nombre": "Negociación"
+    },
+    {
+      "id": "21",
+      "nombre": "Contabilidad"
+    },
+    {
+      "id": "22",
+      "nombre": "Consultoría Empresarial"
+    },
+    {
+      "id": "23",
+      "nombre": "Administración de Empresas"
+    },
+    {
+      "id": "24",
+      "nombre": "Ciberseguridad"
+    },
+    {
+      "id": "25",
+      "nombre": "Programación en Python"
+    },
+    {
+      "id": "26",
+      "nombre": "Análisis Estadístico"
+    },
+    {
+      "id": "27",
+      "nombre": "Gestión de Redes Sociales"
+    },
+    {
+      "id": "28",
+      "nombre": "Desarrollo de Software"
+    },
+    {
+      "id": "29",
+      "nombre": "UX/UI Design"
+    },
+    {
+      "id": "30",
+      "nombre": "Desarrollo de Videojuegos"
+    },
+    {
+      "id": "31",
+      "nombre": "Inteligencia Artificial"
+    },
+    {
+      "id": "32",
+      "nombre": "Machine Learning"
+    },
+    {
+      "id": "33",
+      "nombre": "Blockchain"
+    },
+    {
+      "id": "34",
+      "nombre": "Análisis de Negocios"
+    },
+    {
+      "id": "35",
+      "nombre": "Gestión de Equipos"
+    },
+    {
+      "id": "36",
+      "nombre": "Investigación de Mercado"
+    },
+    {
+      "id": "37",
+      "nombre": "Estrategia de Contenidos"
+    },
+    {
+      "id": "38",
+      "nombre": "Gestión de Eventos"
+    },
+    {
+      "id": "39",
+      "nombre": "Desarrollo de Productos"
+    },
+    {
+      "id": "40",
+      "nombre": "Programación Web"
+    },
+    {
+      "id": "41",
+      "nombre": "Redacción Técnica"
+    },
+    {
+      "id": "42",
+      "nombre": "Gestión de Recursos Humanos"
+    },
+    {
+      "id": "43",
+      "nombre": "Diseño de Marca"
+    },
+    {
+      "id": "44",
+      "nombre": "Producción de Audio"
+    },
+    {
+      "id": "45",
+      "nombre": "Desarrollo en Java"
+    },
+    {
+      "id": "46",
+      "nombre": "Manejo de Base de Datos"
+    },
+    {
+      "id": "47",
+      "nombre": "Pruebas de Software"
+    },
+    {
+      "id": "48",
+      "nombre": "Marketing de Influencers"
+    },
+    {
+      "id": "49",
+      "nombre": "Community Management"
+    },
+    {
+      "id": "50",
+      "nombre": "Gestión Financiera"
+    },
+    {
+      "id": "51",
+      "nombre": "Gestión de Crisis"
+    },
+    {
+      "id": "52",
+      "nombre": "Desarrollo de Backend"
+    },
+    {
+      "id": "53",
+      "nombre": "Cloud Computing"
+    },
+    {
+      "id": "54",
+      "nombre": "Gestión de Inventarios"
+    },
+    {
+      "id": "55",
+      "nombre": "Investigación Científica"
+    },
+    {
+      "id": "56",
+      "nombre": "Diseño de Interfaces"
+    },
+    {
+      "id": "57",
+      "nombre": "Desarrollo de Frontend"
+    },
+    {
+      "id": "58",
+      "nombre": "Gestión de Calidad"
+    },
+    {
+      "id": "59",
+      "nombre": "Análisis de Riesgos"
+    },
+    {
+      "id": "60",
+      "nombre": "Desarrollo de Juegos Móviles"
+    },
+    {
+      "id": "61",
+      "nombre": "Redacción Creativa"
+    },
+    {
+      "id": "62",
+      "nombre": "Coaching"
+    },
+    {
+      "id": "63",
+      "nombre": "Toma de Decisiones"
+    },
+    {
+      "id": "64",
+      "nombre": "Trabajo Remoto"
+    },
+    {
+      "id": "65",
+      "nombre": "Liderazgo"
+    },
+    {
+      "id": "66",
+      "nombre": "Resolución de Conflictos"
+    },
+    {
+      "id": "67",
+      "nombre": "Investigación de Patentes"
+    },
+    {
+      "id": "68",
+      "nombre": "Desarrollo en C++"
+    },
+    {
+      "id": "69",
+      "nombre": "Desarrollo en Ruby"
+    },
+    {
+      "id": "70",
+      "nombre": "Gestión de Proveedores"
+    },
+    {
+      "id": "71",
+      "nombre": "Manejo de Proyectos Ágiles"
+    },
+    {
+      "id": "72",
+      "nombre": "Estrategia Digital"
+    },
+    {
+      "id": "73",
+      "nombre": "Gestión de Talento Humano"
+    },
+    {
+      "id": "74",
+      "nombre": "Gestión de Relaciones con Clientes (CRM)"
+    },
+    {
+      "id": "75",
+      "nombre": "Tendencias Tecnológicas"
+    },
+    {
+      "id": "76",
+      "nombre": "Redacción de Blogs"
+    },
+    {
+      "id": "77",
+      "nombre": "Desarrollo de APIs"
+    },
+    {
+      "id": "78",
+      "nombre": "Gestión de Tiempo en Proyectos"
+    },
+    {
+      "id": "79",
+      "nombre": "Desarrollo de Sistemas"
+    },
+    {
+      "id": "80",
+      "nombre": "Análisis de Sentimientos"
+    },
+    {
+      "id": "81",
+      "nombre": "Video Marketing"
+    },
+    {
+      "id": "82",
+      "nombre": "Desarrollo de Interfaces de Usuario"
+    },
+    {
+      "id": "83",
+      "nombre": "Desarrollo de Soluciones en la Nube"
+    },
+    {
+      "id": "84",
+      "nombre": "Revisión de Código"
+    },
+    {
+      "id": "85",
+      "nombre": "Gestión de Patentes"
+    },
+    {
+      "id": "86",
+      "nombre": "Gestión de la Innovación"
+    },
+    {
+      "id": "87",
+      "nombre": "Planificación Estratégica"
+    },
+    {
+      "id": "88",
+      "nombre": "Networking"
+    },
+    {
+      "id": "89",
+      "nombre": "Desarrollo de Sistemas Integrados"
+    },
+    {
+      "id": "90",
+      "nombre": "Psicología Organizacional"
+    },
+    {
+      "id": "91",
+      "nombre": "Gestión de Cartera"
+    },
+    {
+      "id": "92",
+      "nombre": "Planificación Financiera"
+    },
+    {
+      "id": "93",
+      "nombre": "Iniciativas Empresariales"
+    },
+    {
+      "id": "94",
+      "nombre": "Desarrollo de Prototipos"
+    },
+    {
+      "id": "95",
+      "nombre": "Desarrollo de Software en la Nube"
+    },
+    {
+      "id": "96",
+      "nombre": "Consultoría de Gestión"
+    },
+    {
+      "id": "97",
+      "nombre": "Gestión de la Reputación Online"
+    },
+    {
+      "id": "98",
+      "nombre": "Desarrollo de Tecnología Blockchain"
+    },
+    {
+      "id": "99",
+      "nombre": "Gestión de Inversiones"
+    },
+    {
+      "id": "100",
+      "nombre": "Investigación de Mercado Digital"
     }
   ]
 }

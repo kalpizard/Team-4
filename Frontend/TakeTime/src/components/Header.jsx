@@ -25,10 +25,10 @@ export const Header = () => {
   };
 
   return (
-    <header className='flex items-center justify-between bg-slate-100 h-16 px-4 shadow-md '>
+    <header className='flex  items-center justify-between bg-slate-100 h-16 px-4 shadow-md '>
       {/* Logo */}
       <div className='flex items-center'>
-        <div className='px-4 py-2 text-lg font-semibold'>TakeTime</div>
+        <div className='px-4 py-2 font-black text-3xl'>TakeTime</div>
       </div>
 
       {
@@ -50,7 +50,7 @@ export const Header = () => {
             <li key={e.path}>
               <Link
                 to={e.path}
-                className='text-gray-700 hover:text-rose-500 transition-colors duration-200'
+                className='text-gray-700 hover:text-rose-500 transition-colors duration-200 font-black '
               >
                 {e.label}
               </Link>
