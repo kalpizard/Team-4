@@ -21,7 +21,7 @@ export const Header = () => {
     <header className="flex items-center justify-between bg-nav h-16 px-4 shadow-md ">
       {/* Logo */}
       <div className="flex items-center">
-        <div className="px-4 py-2 text-lg font-semibold">
+        <div className="px-4 py-2 text-lg font-semibold animate-fade-right animate-ease-linear">
           TakeTime
         </div>
       </div>
