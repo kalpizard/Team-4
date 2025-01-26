@@ -16,7 +16,7 @@ export const Register = ({ children, title = 'Sign In' }) => {
     // Age: '',
     password: '',
     // Nationality: '',
-    hora: 10
+    hora: 5
   });
 
   const { name, email, password } = formData;
@@ -101,35 +101,6 @@ export const Register = ({ children, title = 'Sign In' }) => {
               required
             />
           </div>
-          {/* 
-          <div>
-            <label className="text-gray-800 text-sm mb-2 block">Age</label>
-            <input
-              id="Age"
-              name="Age"
-              type="text"
-              value={Age}
-              onChange={handleChange}
-              placeholder="Enter your age"
-              className="w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
-              required
-            />
-          </div>
-
-          <div>
-            <label className="text-gray-800 text-sm mb-2 block">Nationality</label>
-            <input
-              id="Nationality"
-              name="Nationality"
-              type="text"
-              value={Nationality}
-              onChange={handleChange}
-              placeholder="Enter your nationality"
-              className="w-full text-sm text-gray-800 border border-gray-300 px-4 py-3 rounded-md outline-blue-600"
-              required
-            /> */}
-          {/* </div> */}
-
           <div>
             <label className="text-gray-800 text-sm mb-2 block">Password</label>
             <input

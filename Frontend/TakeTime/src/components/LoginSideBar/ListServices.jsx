@@ -6,94 +6,43 @@ import { deleteData, getData, postTransaction } from "../../services/axios.js"; 
 import { putData } from "../../services/axios.js";
 
 export const ListServices = () => {
-  const { userSession, update,setUpdate } = useAuthContext();
   const { services, error, fetchServices, updateService, setUpdateService  } = useServices(); // fetchServices para actualizar después de cambios
+  const { userSession, update,setUpdate } = useAuthContext();
   const [openTradeModal, setOpenTradeModal] = useState(false);
+
   const [selectedService, setSelectedService] = useState(null);
   const [hours, setHours] = useState(0);
+  const [message, setmessage] = useState('')
+
+  
   const url = "http://localhost:3001/tratos"
   const urlusers = "http://localhost:3001/usuarios"
   const urlservices = 'http://localhost:3001/servicios'
 
-  // const handleTrade = async () => {
-    
-  //   if (!selectedService || hours <= 0 || selectedService.hora <= 0 )  return alert("No tienes horas disponibles");
-  //   try {
-      
-  //     const data = {
-  //       serviceId: selectedService.id,
-  //       buyerId: userSession.id,
-  //       buyerName: userSession.name,
-  //       sellerId: userSession.id, // Ajusta según tu estructura
-  //       sellerName: selectedService.nameUser, // Ajusta según tu estructura
-  //       hours: hours,
-  //       type: "trade",
-  //     }
-  //     await postTransaction(url, data);
-  //     alert("Intercambio realizado exitosamente");
-  
-
-  //     const userBuy = {
-    
-  //         buyerId: userSession.id,
-  //         name: userSession.name,
-  //         email: userSession.email,
-  //         password: userSession.password,
-  //         hora: userSession.hora - hours
-  //     }
-  //     await putData(urlusers, userSession.id, userBuy)
-  //     setUpdate(update+1)
-      
-      
-  //     //suma las horas al vendedor
-  //     // await putData(urluserSeller,)
-
-      
-  //     const d = await getData(`${urlusers}/${userSession.id}`)
-  //     const usuarioData = d.data
-  //     console.log(usuarioData);
-  //     const datosUpdateUsersData = {
-  //       id: usuarioData.id,
-  //       name: usuarioData.name ,
-  //       email: usuarioData.email,
-  //       password: usuarioData.password,
-  //       hora: usuarioData.hora + hours
-  //     }
-  //     await putData(url, userSession.id, datosUpdateUsersData)
-      
-      
-
-  //     // decrementan las horas de el servicio
-  //     // await putData(urlusers, selectedService.id)
-  //     const servicioUpdate = {
-  //       habilidad: selectedService.habilidad,
-  //       horasDisponibles: selectedService.horasDisponibles - hours,
-  //       id: selectedService.id,
-  //       idUsuario: selectedService.idUsuario,
-  //       modalidad: selectedService.modalidad,
-  //       nameUser: selectedService.nameUser,
-  //       nombreServicio: selectedService.nombreServicio,
-  //       ubicacion: selectedService.ubicacion
-  
-  //     }
-  //     await putData(urlservices, selectedService.id, servicioUpdate)
-  //     console.log(selectedService.horasDisponibles - hours);
-      
-  //       if(selectedService.horasDisponibles - hours <= 0){
-  //         await deleteData(urlservices, selectedService.id)
-  //       }
-  //     setUpdateService(updateService+1)
-      
-
-  //     setOpenTradeModal(false);
-  //   } catch (error) {
-  //     alert("Error al intercambiar horas: " + error.message);
-  //   }
-  // };
   const handleTrade = async () => {
+
+
     if (!selectedService || hours <= 0 || selectedService.horasDisponibles <= 0) {
-      return alert("No tienes horas disponibles o el servicio seleccionado no tiene horas suficientes.");
+       setmessage("No tienes horas disponibles o el servicio seleccionado no tiene horas suficientes.")
+       return setTimeout(() => {
+         setmessage(' ')
+       }, 3000);
     }
+    if (userSession.id == selectedService.idUsuario) {
+       setmessage("No puedes contratar tus propios servicios")
+       return setTimeout(() => {
+         setmessage(' ')
+       }, 3000);
+
+    }
+    if(userSession.hora <= 0){
+       setmessage('No tienes las horas necesarias para adquirir este servicio')
+       return setTimeout(() => {
+         setmessage(' ')
+       }, 3000);
+
+    }
+    // if()
   
     try {
       // Datos para el trato
@@ -108,7 +57,11 @@ export const ListServices = () => {
       };
       await postTransaction(url, data);  // Realiza el trato
   
-      alert("Intercambio realizado exitosamente");
+      setmessage("Intercambio realizado exitosamente");
+      setTimeout(() => {
+        setmessage(' ')
+      }, 3000);
+      
   
       // Actualización del comprador (restar horas)
       const userBuy = {
@@ -144,7 +97,7 @@ export const ListServices = () => {
       setOpenTradeModal(false);  // Cerrar el modal
   
     } catch (error) {
-      alert("Error al intercambiar horas: " + error.message);
+      setmessage("Error al intercambiar horas: " + error.message);
     }
   };
   
@@ -165,7 +118,7 @@ export const ListServices = () => {
               <li key={service.id}>
                 <h1 className="font-black">Creado por: {service.nameUser}</h1>
                 <h1 className="font-semibold">Nombre del servicio: {service.nombreServicio}</h1>
-                <h1 className="font-semibold">Habilidad: {service.habilidad}</h1>
+                <h1 className="font-semibold">Habilidades por enseñar: {service.habilidad}</h1>
                 <h2 className="font-semibold" >Ubicacion: {service.ubicacion}</h2>
                 <h3 className="font-semibold">Modalidad: {service.modalidad}</h3>
                 <h5 className="font-semibold">Horas Disponibles: {service.horasDisponibles}</h5>
@@ -185,6 +138,7 @@ export const ListServices = () => {
             <p>No hay servicios disponibles</p>
           )}
         </ul>
+        <h2>{message}</h2>
       </div>
 
       {/* Modal para intercambio */}
@@ -193,21 +147,31 @@ export const ListServices = () => {
         Close={() => setOpenTradeModal(false)}
       >
         <h2 className="text-xl text-black font-bold">Intercambiar Horas</h2>
-        <p className="text-black ">Servicio: {selectedService?.nombreServicio}</p>
+        <h3 className="text-black ">Creador de servicio: {selectedService?.nameUser}</h3>
+        <h3 className="text-black ">Servicio: {selectedService?.nombreServicio}</h3>
+        <h3 className="text-black ">Horas disponibles: {selectedService?.horasDisponibles}</h3>
+        <h3 className="text-black ">ubicacion: {selectedService?.ubicacion}</h3>
+
+
         <p>Horas disponibles: {selectedService?.horasDisponibles}</p>
-        <input
-          type="number"
-          className="border rounded text-black  p-2 mt-2 w-full"
-          placeholder="Horas a intercambiar"
-          value={hours}
-          onChange={(e) => setHours(Number(e.target.value))}
-        />
+      <input
+        type="range"
+        min={0}  // Valor mínimo permitido
+        max={4}  // Valor máximo permitido
+        className="border rounded text-black p-2 mt-2 w-full"
+        placeholder="Horas a intercambiar"
+        value={hours}
+        onChange={(e) => setHours(Number(e.target.value))}
+      />
+        <h4 className="text-black font-normal">Horas seleccionadas: {hours}</h4>
+        <p className="text-black">{message}</p>
         <button
           className="bg-green-500 py-2 px-4 rounded-lg hover:bg-green-600 mt-4"
           onClick={handleTrade}
         >
           Confirmar
         </button>
+        
       </Modal>
 
 
